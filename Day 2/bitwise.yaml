@@ -1,0 +1,79 @@
+Bitwise operators in Python perform operations on integers at the binary (bit) level. These operators manipulate bits directly, making them useful in low-level programming, such as system programming or working with hardware.
+
+1.   AND (`&`)
+   - Compares each bit of two numbers and returns `1` if both bits are `1`, otherwise `0`.  
+   - Example:  
+     ```
+     5 & 3  
+     5 = 0101  
+     3 = 0011  
+     Result: 0001 (1 in decimal)
+     ```
+
+---
+
+2.   OR (`|`)
+   - Compares each bit of two numbers and returns `1` if **at least one** bit is `1`.  
+   - Example:  
+     ```
+     5 | 3  
+     5 = 0101  
+     3 = 0011  
+     Result: 0111 (7 in decimal)
+     ```
+
+---
+
+3.   XOR (`^`)
+   - Compares each bit of two numbers and returns `1` if **only one** bit is `1` (exclusive OR).  
+   - Example:  
+     ```
+     5 ^ 3  
+     5 = 0101  
+     3 = 0011  
+     Result: 0110 (6 in decimal)
+     ```
+
+---
+
+4.   NOT (`~`)
+   - Inverts all the bits of a number (1 becomes 0, and 0 becomes 1).  
+   - Formula: `~x = -(x + 1)`  
+   - Example:  
+     ```
+     ~5  
+     5 = 0101  
+     Result: -(0101 + 1) = -6
+     ```
+
+---
+
+5.   Left Shift (`<<`)
+   - Shifts the bits of a number to the left by a specified number of positions, filling in with `0`s on the right.  
+   - Equivalent to multiplying by `2^n`.  
+   - Example:  
+     ```
+     5 << 1  
+     5 = 0101  
+     Result: 1010 (10 in decimal)
+     ```
+
+---
+
+6.   Right Shift (`>>`)
+   - Shifts the bits of a number to the right by a specified number of positions, discarding bits on the right.  
+   - Equivalent to integer division by `2^n`.  
+   - Example:  
+     ```
+     5 >> 1  
+     5 = 0101  
+     Result: 0010 (2 in decimal)
+     ```
+
+---
+
+### **Use Cases**  
+- Masking: Isolating specific bits in binary.  
+- Flags: Turning specific bits on or off.  
+- Efficient Multiplication/Division: Using shifts for powers of 2.  
+- Encryption: XOR is common in encryption algorithms.

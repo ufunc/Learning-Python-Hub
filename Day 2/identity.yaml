@@ -1,0 +1,42 @@
+1. `is`
+   - Evaluates to `True` if two variables refer to the same object in memory.  
+   - Example:  
+     x = [1, 2, 3]
+     y = x  # `y` refers to the same object as `x`
+     z = [1, 2, 3]  # `z` is a new object with the same content as `x`
+     
+     print(x is y)  # True (same memory location)
+     print(x is z)  # False (different memory location)
+
+---
+
+2. `is not`
+   - Evaluates to `True` if two variables **do not refer to the same object** in memory.  
+   - Example:  
+     x = [1, 2, 3]
+     z = [1, 2, 3]
+     
+     print(x is not z)  # True (different memory locations)
+
+---
+
+# Key Notes
+- Identity operators check object identity, not the value of the object.  
+  For example:  
+  x = 1000
+  y = 1000
+  print(x == y)   # True (values are equal)
+  print(x is y)   # False (different memory locations)
+
+- For small integers and strings, Python may cache objects to save memory, so `is` can sometimes return `True` unexpectedly:  
+
+  a = 10
+  b = 10
+  print(a is b)  # True (Python caches small integers)
+
+
+---
+
+# When to Use Identity Operators?
+- To check if two variables refer to the same object (e.g., comparing references, not values).
+- Useful in certain optimization scenarios or while debugging.
