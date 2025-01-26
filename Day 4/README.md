@@ -1,6 +1,5 @@
 # Focus:
 - if, elif, and else
 - While loops
-- numpy
 
-First of all i'm thankful to me to continue python learning hub after some unimportant break!
+First of all, I'm thankful to me to continue the Python learning hub after some unimportant break!
